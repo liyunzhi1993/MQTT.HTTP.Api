@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MQTT.Model</name>
+    </assembly>
+    <members>
+        <member name="P:MQTT.API.Model.BaseIoTModel.DeviceType">
+            <summary>
+            设备类型【不用传】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.BaseIoTModel.StationId">
+            <summary>
+            站点ID【不用传】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.BaseIoTModel.TenantId">
+            <summary>
+            商户ID【不用传】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.BaseIoTModel.DeviceId">
+            <summary>
+            设备ID【不用传】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.BaseIoTModel.DeviceSn">
+            <summary>
+            设备号【不用传】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.BaseOutModel`1.Data">
+            <summary>
+            具体业务数据
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.BaseOutModel`1.Code">
+            <summary>
+            返回状态码【200正常，0有错误】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.BaseOutModel`1.Message">
+            <summary>
+            错误描述，Code为0使用
+            </summary>
+        </member>
+        <member name="M:MQTT.API.Model.BaseOutModel`1.#ctor">
+            <summary>
+            构造
+            </summary>
+        </member>
+        <member name="M:MQTT.API.Model.BaseOutModel`1.Error(System.String)">
+            <summary>
+            错误
+            </summary>
+            <param name="msg"></param>
+        </member>
+        <member name="P:MQTT.API.Model.In.AuthorizeInModel.DeviceSn">
+            <summary>   
+            设备编号
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.AuthorizeInModel.DevicePassword">
+            <summary>
+            设备密码
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.AuthorizeInModel.Version">
+            <summary>
+            软件版本【一期不使用】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.GetConfigInModel.IsAll">
+            <summary>
+            是否获取全部配置，如果为false，则获取configList列表中的数据
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.GetConfigInModel.ConfigList">
+            <summary>
+            单个获取、批量获取配置
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.ConfigKeyInModel.Key">
+            <summary>
+            配置的Key
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.PingInModel.Delay">
+            <summary>
+            网络延迟，单位ms【前端记录请求时间，记录返回请求时间，相减，下次ping传】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.PublishMessageInModel.Topic">
+            <summary>
+            发布的Topic
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.PublishMessageInModel.Content">
+            <summary>
+            发布的消息体
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.PublishMessageInModel.ReceiveTopic">
+            <summary>
+            接收消息Topic【只有不为空，IoT才会去处理接收设备端的回复消息】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.PublishMessageInModel.DeviceSn">
+            <summary>
+            设备编号【只有对接过IoT平台才能使用】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.RebootInModel.DeviceSn">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.ReceiveMessageInModel.DeviceSn">
+            <summary>
+            设备编号【只有对接过IoT平台才能使用】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.ReceiveMessageInModel.MessageId">
+            <summary>
+            消息ID【与发布的MID请保持一致才能获取到消息】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.SetConfigInModel.ConfigList">
+            <summary>
+            配置列表
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.ConfigInModel.Key">
+            <summary>
+            配置的Key
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.ConfigInModel.Value">
+            <summary>
+            配置的Value
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.SetDataInModel.ShadowData">
+            <summary>
+            影子数据
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.StatusInModel.CameraStatus">
+            <summary>
+            摄像头状态
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.StatusInModel.Scanner">
+            <summary>
+            扫码器
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.StatusInModel.LockStatus">
+            <summary>
+            锁控板状态
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.StatusInModel.AvailableStorage">
+            <summary>
+            可用存储空间 单位M
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.StatusInModel.Temperature">
+            <summary>
+            Temperature 温度
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.StatusInModel.Cpu">
+            <summary>
+            cpu百分比（分子的值，分母100.0，如98% 则只需要98.0）
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.StatusInModel.Ram">
+            <summary>
+            Ram可用量 单位M
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.StatusInModel.SupplyVoltage">
+            <summary>
+            供电电压
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.UpdateInModel.DeviceSn">
+            <summary>
+            设备编号
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.In.UpdateInModel.Url">
+            <summary>
+            软件包下载地址
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.MqttContentModel.Mid">
+            <summary>
+            消息ID
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.MqttContentModel.Sn">
+            <summary>
+            设备编码
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.MqttPayloadModel`1.Met">
+            <summary>
+            Payload方法
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.MqttPayloadModel`1.Con">
+            <summary>
+            操作正文 对应每个Method的正文内容
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.MqttPayloadModel`1.Ts">
+            <summary>
+            后续消息唯一ID
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.AuthorizeOutModel.Token">
+            <summary>
+            JwtToken
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.BaseApiOutModel.IsSuccess">
+            <summary>
+            执行成功/失败
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.GetConfigOutModel.ConfigList">
+            <summary>
+            配置列表
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.ConfigOutModel.Key">
+            <summary>
+            配置的Key
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.ConfigOutModel.Value">
+            <summary>
+            配置的Value
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.GetDataOutModel.ShadowData">
+            <summary>
+            影子数据
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.PingOutModel.CommandType">
+            <summary>
+            心跳回传命令类型 1：需要重启 2：需要升级 3：需要重新获取配置
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.PingOutModel.CommandValue">
+            <summary>
+            心跳回传命令返回的值 1：需要升级的url
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.PublishMessageOutModel.Content">
+            <summary>
+            回复消息的内容
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.PublishMessageOutModel.ReceiveStatus">
+            <summary>
+            回复状态【1 已回复，0 未回复 即超时】
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.ReceiveMessageOutModel.Content">
+            <summary>
+            回复消息的内容
+            </summary>
+        </member>
+        <member name="P:MQTT.API.Model.Out.ReceiveMessageOutModel.ReceiveStatus">
+            <summary>
+            回复状态【0：未回复，即超时 1：已回复】
+            </summary>
+        </member>
+    </members>
+</doc>

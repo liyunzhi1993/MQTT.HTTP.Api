@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MQTT.API</name>
+    </assembly>
+    <members>
+        <member name="T:MQTT.API.Controllers.ApiController">
+            <summary>
+            MQTT的Api
+            </summary>
+        </member>
+        <member name="M:MQTT.API.Controllers.ApiController.PublishMessage(MQTT.API.Model.In.PublishMessageInModel)">
+            <summary>
+            发布消息
+            </summary>
+            <param name="publishMessageInModel"></param>
+            <remarks>
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:MQTT.API.MQTT.ServiceImpl.MQTTServiceImpl.PublishMessage(MQTT.API.Model.In.PublishMessageInModel)">
+            <summary>
+            发布消息
+            </summary>
+            <param name="publishInModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MQTT.API.MQTT.Service.IMQTTService.PublishMessage(MQTT.API.Model.In.PublishMessageInModel)">
+            <summary>
+            发布消息
+            </summary>
+            <param name="publishInModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MQTT.API.Startup.ReceivedMessageHandler(System.Object,MQTTnet.MqttApplicationMessageReceivedEventArgs)">
+            <summary>
+            接收MQTT消息
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+    </members>
+</doc>

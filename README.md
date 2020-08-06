@@ -71,7 +71,7 @@ var mqttConfig = new MqttConfig
 {
     Server = _config.Get("EMQServer"),//服务器IP
     Port = int.Parse(_config.Get("EMQPort")),//端口
-    ClientIdPre = "DiYi.IoT.MQTT"//IoT MQTT连接
+    ClientIdPre = "IoT.MQTT"//IoT MQTT连接
 };
 
 mqttConfig.TopicList = new List<string>()
@@ -201,13 +201,13 @@ var content = new
 //请求入参模型
 var iotPublishMessageModel = new
 {
-    //请求Topic，目前递易体系的Topic定义请结合自身项目
+    //请求Topic
     Topic = "Device/Reboot",
     //请求mqtt的消息体
     Content = EncryptUtil.Base64Encode(JsonConvert.SerializeObject(content)),
     //消息ID
     MessageId = Mid,
-    //可选参数 需要消息回复则传，目前递易体系的回复Topic定义请结合自身项目
+    //可选参数 需要消息回复则传
     ReceiveTopic = Mid+"Device/Reboot",
     //设备号
     DeviceSn = "123123123"

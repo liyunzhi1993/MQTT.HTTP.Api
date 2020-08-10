@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper.Contrib" Version="2.0.35" />
+    <PackageReference Include="MySql.Data" Version="8.0.20" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MQTT.Common\MQTT.Common.csproj" />
+    <ProjectReference Include="..\MQTT.Entity\MQTT.Entity.csproj" />
+  </ItemGroup>
+</Project>
